@@ -35,7 +35,7 @@ export function HomeStackNavigator() {
         options={{
           header: () => {
             return (
-              <View className="flex-row pt-8 pb-4 px-4 bg-white items-center">
+              <View className="flex-row pt-0 pb-4 px-4 bg-white items-center">
                 <View className="flex">
                   <Avatar alt="Zach Nugent's Avatar">
                     <AvatarImage

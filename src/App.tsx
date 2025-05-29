@@ -5,6 +5,7 @@ import 'react-native-gesture-handler';
 import AppNavigator from './routers/AppNavigator';
 
 function App(): React.JSX.Element {
+  
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
