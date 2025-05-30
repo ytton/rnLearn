@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import type { HomeDetailProps } from '~/types/router';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import type {HomeDetailProps} from '~/types/router';
 
-export default function HomeDetailScreen({ route }: HomeDetailProps) {
-  const { id, title } = route.params;
+export default function HomeDetailScreen({route}: HomeDetailProps) {
+  const {id, title} = route.params;
 
   return (
     <ScrollView style={styles.container}>
@@ -12,8 +12,7 @@ export default function HomeDetailScreen({ route }: HomeDetailProps) {
         <Text style={styles.id}>ID: {id}</Text>
         <Text style={styles.description}>
           这里是 {title} 的详细内容。你可以在这里展示更多信息，
-          比如文章内容、图片、视频等等。这个页面是通过导航参数
-          传递数据的示例。
+          比如文章内容、图片、视频等等。这个页面是通过导航参数 传递数据的示例。
         </Text>
       </View>
     </ScrollView>

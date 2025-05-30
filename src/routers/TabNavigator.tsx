@@ -2,8 +2,8 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeStackNavigator, UserCenterStackNavigator} from './StackNavigators';
 import type {TabParamList} from '~/types/router';
-import {Home} from '~/lib/icons/Home';
 import {TouchableWithoutFeedback, View} from 'react-native';
+import FontIcon from '~/components/FontIcon';
 const Tab = createBottomTabNavigator<TabParamList>();
 
 export default function TabNavigator() {
@@ -12,26 +12,26 @@ export default function TabNavigator() {
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarIcon: ({focused, color, size}) => {
-          // let iconName: string;
+          let iconName: string;
 
-          // switch (route.name) {
-          //   case 'HomeTab':
-          //     iconName = focused ? 'home' : 'home-outline';
-          //     break;
-          //   case 'SearchTab':
-          //     iconName = focused ? 'search' : 'search-outline';
-          //     break;
-          //   case 'ProfileTab':
-          //     iconName = focused ? 'person' : 'person-outline';
-          //     break;
-          //   case 'SettingsTab':
-          //     iconName = focused ? 'settings' : 'settings-outline';
-          //     break;
-          //   default:
-          //     iconName = 'home-outline';
-          // }
-
-          return <Home className={focused ? 'text-red-500' : 'text-red-700'} />;
+          switch (route.name) {
+            case 'HomeTab':
+              iconName = focused ? 'home-fill' : 'home';
+              break;
+            case 'TimelineTab':
+              iconName = focused ? 'search' : 'search-outline';
+              break;
+            case 'RankTab':
+              iconName = focused ? 'person' : 'person-outline';
+              break;
+            case 'DiscoveryTab':
+              iconName = focused ? 'settings' : 'settings-outline';
+              break;
+            case 'UserCenterTab':
+              iconName = focused ? 'mine-fill' : 'mine';
+              break;
+          }
+          return <FontIcon name={iconName as any} color={color} size={size} />;
         },
         tabBarPressColor: 'transparent',
         tabBarPressOpacity: 1,

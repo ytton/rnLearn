@@ -21,11 +21,6 @@ export type TabParamList = {
   UserCenterTab: undefined;
 };
 
-// 组合类型
-export type HomeScreenProps = BottomTabScreenProps<
-  HomeStackParamList,
-  'HomeScreen'
->;
 
 // export type HomeScreenProps = StackScreenProps<
 //   HomeStackParamList,
